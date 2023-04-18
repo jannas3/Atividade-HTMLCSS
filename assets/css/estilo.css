@@ -1,0 +1,276 @@
+/* Estrutura básica de uma arquivo CSS */
+
+* {
+  margin: 0;
+  /*Define a margem externa de todos os elementos como zero*/
+  padding: 0;
+  /*Define o preenchimento interno de todos os elementos como zero*/
+  list-style: none;
+  /*Remove os marcadores de lista (por exemplo, pontos ou números) de todas as listas HTML.*/
+  vertical-align: baseline;
+  /* Define o alinhamento vertical de todos os elementos como a linha de base*/
+
+}
+
+body {
+  background-color: #ffffff;
+  /*Define a cor de fundo do body como branco */
+  color: #000000;
+  /*Define a cor do texto do body como preto*/
+  font-size: 40.5%;
+  /* Define o tamanho da fonte do body como 40.5%(16pixels) do tamanho padrão do navegador*/
+  font: 100% Arial, FreeSans, sans-serif;
+  /* Define a família de fontes usada no body*/
+  text-align: justify;
+  /* Define o alinhamento do texto do body como justificado.*/
+  overflow-x: hidden;
+  /*deixa como oculto  a rolagem rolagem horizontal do body */
+}
+
+/* estilo do cabeçalho */
+header {
+  padding: 10px 20px 20px 40px;
+  /*Define o preenchimento interno do elemento, 20 pixels para o direito, 20 pixels para o inferior e 40 pixels para a esquerda.*/
+  background: radial-gradient(ellipse at center, #19882c 1%, #025310 100%);
+  /*#19882c no centro do elemento e termina com a cor #025310 na borda externa do elemento. O valor ellipse at center forma do gradiente que é centralizada no elemento.*/
+  text-align: center;
+  /* alinhamento horizontal do texto dentro do elemento como centralizado.*/
+  width: 100%;
+  /*elemento se estende ao longo de toda a largura da tela.*/
+}
+
+#logo span {
+  position: absolute;
+  /*Define a posição do elemento como absoluta em relação ao elemento pai.*/
+  display: block;
+  /*Define o tipo de exibição do elemento como bloco*/
+  line-height: 1em;
+  /*Define a altura da linha do elemento como 1 vez o tamanho da fonte do elemento*/
+
+}
+
+#portal-title {
+  margin: 0;
+  /*Define as margens do elemento como zero*/
+  margin: 15px 0 0px;
+  /*Define as margens superior, inferior e esquerda do elemento como 15 pixels e a margem direita como zero.*/
+  color: #ffffff;
+  /*Define a cor do texto do elemento como branco */
+  font-size: 2em;
+  /* Define o tamanho da fonte do elemento como 2 vezes o tamanho da fonte padrão do navegador*/
+  font-family: 'Open Sans', sans-serif;
+  /*Define a família de fontes usada no elemento.*/
+  line-height: 1.5em;
+  /*Define a altura da linha do texto como 1,5 vezes o tamanho da fonte do elemento*/
+}
+
+#portal-description {
+  text-transform: uppercase;
+  /*Define o estilo de capitalização do texto como maiúsculas*/
+  font-size: 1em;
+  /*Define o tamanho da fonte do elemento como o tamanho padrão do navegador. 1em(16pixels)*/
+}
+
+#portal-logo {
+  display: inline-block;
+  /*O elemento será exibido em linha,mas as margens e preenchimentos sejam definidos em torno dele, como um bloco.*/
+  margin: 1.375em 0;
+  /*Define as margens superior e inferior do elemento como 1.375 vezes o tamanho da fonte do elemento e a margem esquerda e direita como zero.*/
+}
+
+#portal-logo,
+#portal-title {
+  color: #ffffff !important;
+  /*Ambos os elementos terão a cor do texto definida como branco, independentemente de outras regras CSS que possam tentar alterar sua cor.*/
+}
+
+#portal-title-1 {
+  font-size: 1em;
+  /**Define o tamanho da fonte do elemento como o tamanho padrão*/
+  position: relative;
+  /*Define a posição do elemento como relativa, o que permite que a propriedade top tenha efeito.*/
+  top: 30px;
+  /*Define a distância vertical do elemento em relação à sua posição original.  30 pixels para baixo*/
+}
+
+/* estilo da seção de imagem */
+section.image {
+  display: flex;
+  /* define o layout flexível */
+  flex-direction: column;
+  /*  direção dos itens na seção, neste caso, em uma única coluna vertical.*/
+  align-items: center;
+  /* centraliza verticalmente os itens da seção.*/
+  padding: 20px;
+  /*  define a quantidade de espaço entre o conteúdo da seção e sua borda.*/
+}
+
+section.image img {
+  width: 200px;
+  /*da largura da imagem em 200 pixels. */
+  height: 200px;
+  /* altura da imagem em 200 pixels.*/
+  border-radius: 50%;
+  /*adicionando um efeito de borda circular*/
+  margin-bottom: 20px;
+  /*para criar um espaçamento entre a imagem e o texto que vem depois dela.*/
+}
+
+/* Conteúdo principal da página */
+.container {
+  display: flex;
+  /*elemento deve ser exibido verticalmente*/
+  flex-direction: column;
+  /*com direção de coluna*/
+  align-items: center;
+  /*seja organizado verticalmente e centralizado */
+}
+
+.box {
+  font-family: 'Inter', sans-serif;
+
+  background-color: #f2f2f2;
+  /*a cor de fundo da caixa como #f2f2f2 (cinza claro).*/
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  /*adiciona uma sombra suave à caixa*/
+  max-width: 700px;
+  /* a largura máxima da caixa */
+  margin: 20px;
+  padding: 20px;
+  /* Adiciona um espaçamento interno */
+  border-radius: 10px;
+  /*criando bordas arredondadas.*/
+  text-align: center;
+  /*define o alinhamento horizontal do conteúdo dentro da caixa.*/
+}
+
+.box h2 {
+
+  margin-top: 0;
+  /* Remove o espaçamento padrão do título */
+  font-family: 'Emilys Candy', cursive;
+}
+
+.box p {
+  text-align: justify;
+}
+
+
+
+video,
+audio {
+  display: block;
+  /*para forçar o elemento a se comportar como um bloco*/
+  max-width: 100%;
+  /*Isso fará com que o vídeo se ajuste ao tamanho da caixa*/
+  margin: 0 auto;
+  /*são utilizadas para centralizar horizontalmente*/
+
+}
+
+table {
+  margin: 0 auto;
+  /* Define as margens superior e inferior como 0 e as laterais como automático, centralizando a tabela horizontalmente em seu contêiner.*/
+  margin-top: 20px;
+  /*Define a margem superior como 20 pixels, adicionando um espaço entre a tabela e o elemento acima dela.*/
+  margin-left: auto;
+  /* Define a margem esquerda como automático, o que ajuda a centralizar a tabela horizontalmente.*/
+  margin-right: auto;
+  /* Define a margem direita como automático, ajudando a centralizar a tabela horizontalmente.*/
+  width: 100%;
+  /*  largura da tabela como 100% do seu elemento pai, o que faz com que a tabela ocupe todo o espaço disponível.*/
+  max-width: 800px;
+  /*Define a largura máxima da tabela como 800 pixels*/
+  font-size: 1.2em;
+  /* aumenta o tamanho da fonte em 20% */
+  border-collapse: collapse;
+  /*Criar uma aparência mais limpa e organizada para a tabela.*/
+  font-family: Arial, sans-serif;
+}
+
+th,
+td {
+  text-align: left;
+  /*" alinha o texto à esquerda da célula*/
+  padding: 8px;
+  /*espaço de 8 pixels entre o conteúdo da célula e a borda*/
+}
+
+th {
+  background-color: #19882c;
+  /* a cor de fundo*/
+  color: white;
+  /*cor do texto*/
+}
+
+
+a {
+  color: inherit;
+  /*faz com que a cor do link seja herdada do elemento pai*/
+  text-decoration: none;
+  /*remove a decoração padrão do link*/
+}
+
+tr:hover td {
+  transform: scale(1.2);
+  /* aumenta o tamanho do texto em 20% */
+  background-color: rgb(150, 239, 175);
+  /* muda a cor do texto para verde */
+}
+
+/* estilo do rodapé */
+#rodape {
+  background: radial-gradient(ellipse at center, #19882c 1%, #025310 100%);
+  color: #fff;
+  /*cor do texto */
+  padding: 50px;
+  /*um espaçamento interno de 50 pixels  */
+  bottom: 0;
+  /*posiciona o elemento no canto inferior  da página*/
+  left: 0;
+  /*posiciona o elemento no canto  esquerdo da página*/
+  display: flex;
+  /*aplica um layout flexível ao elemento*/
+  justify-content: center;
+  /* centraliza seu conteúdo horizontalmente.*/
+}
+
+.endereco,
+.rede-sociais {
+  align-items: center;
+  /*centraliza os elementos verticalmente.*/
+  display: inline-block;
+  /*faz com que os elementos sejam exibidos na mesma linha e que o tamanho seja determinado pelo conteúdo*/
+  vertical-align: top;
+  /*alinha os elementos ao topo da linha de base*/
+  margin-right: 90px;
+  /*diciona uma margem de 80 pixels à direita*/
+}
+
+#rodape h3 {
+  font-size: 24px;
+  /*o tamanho da fonte*/
+  font-weight: 600;
+  /*Define a espessura da fonte como 600,*/
+  margin-bottom: 20px;
+  /* margem inferior de 20 pixels para separar o elemento seguinte.*/
+}
+
+#rodape p {
+  text-align: justify;
+  /*o alinhamento do texto*/
+  font-size: 16px;
+  /*tamanho da fonte do text*/
+  margin-bottom: 30px;
+  /*a margem inferior do elemento*/
+}
+
+.rede-sociais li a svg {
+  transition: all 0.2s ease-in-out;
+  /* define o tempo de duração da transição e o valor*/
+}
+
+.rede-sociais li a:hover svg {
+  transform: scale(1.2);
+  /*é usado para aumentar a escala do elemento em 20%*/
+}
