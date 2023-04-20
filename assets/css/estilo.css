@@ -233,6 +233,7 @@ tr:hover td {
   /*aplica um layout flexível ao elemento*/
   justify-content: center;
   /* centraliza seu conteúdo horizontalmente.*/
+  width: 100%;
 }
 
 .endereco,
